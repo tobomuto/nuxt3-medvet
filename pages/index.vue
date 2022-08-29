@@ -1,5 +1,5 @@
 <template>
-  <h1>blep</h1>
+  <h1>Test</h1>
 </template>
 
 <script>
