@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-
 @font-face {
     font-family: 'Poppins-regular';
     font-style: normal;
@@ -17,4 +14,5 @@
     src: url('@/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
 }
 
-@tailwind utilities;
+$fontRegular: 'Poppins-regular', Arial, Helvetica, sans-serif;
+$fontBold: 'Poppins-bold', Arial, Helvetica, sans-serif;

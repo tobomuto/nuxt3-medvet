@@ -1,0 +1,7 @@
+// Add all variables/mixins files needed and import them here.
+// _variables is recorded in the nuxt.config.js file.
+@import "./font-faces";
+@import "./_colors";
+@import "./responsive";
+@import "./utils";
+@import "./_mixins";
