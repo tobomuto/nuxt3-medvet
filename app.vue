@@ -1,7 +1,134 @@
 <template>
-  <div>
+
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
-  </div>
+
 </template>
+
+<style lang='scss'>
+
+@import '~/assets/styles/_variables.scss';
+
+html {
+  font-family: $fontRegular;
+  color: $textMainColor;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $bodyBackground;
+  margin: 0;
+}
+
+main {
+  padding: 30px 0;
+}
+
+.main-content {
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+input {
+  padding: 1em 2em;
+  background: white;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadius;
+  &::placeholder {
+    color: $textMainColor;
+  }
+}
+
+input:focus:not(input[type=checkbox]) {
+  border: 1px solid $secondary;
+  outline: 2px solid $secondary;
+} 
+
+input[type=search] {
+  width: 320px;
+}
+
+::selection {
+  color: white;
+  background: $primary;
+}
+
+hr {
+  border-color: $borderColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontBold;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+
+button {
+  font-family: $fontBold;
+}
+
+.button_large_secondary_light {
+  @include button(large, secondary, light);
+}
+
+.button_large_secondary_dark {
+  @include button(large, secondary, light);
+}
+
+.button_large_primary_light {
+  @include button(large, primary, light);
+}
+
+.button_large_primary_dark {
+  @include button(large, primary, dark);
+}
+
+.button_small_secondary_light {
+  @include button(small, secondary, light);
+}
+
+.button_small_secondary_dark {
+  @include button(small, secondary, dark);
+}
+
+.button_small_primary_light {
+  @include button(small, primary, light);
+}
+
+.button_small_primary_dark {
+  @include button(small, primary, dark);
+}
+
+.container {
+  @include container;
+}
+
+.shadow {
+  box-shadow: $boxShadowLight;
+}
+
+</style>
