@@ -16,10 +16,8 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang='scss'>
 
-main {
-    padding: 30px 0;
-}
+@import '~/assets/styles/_variables.scss';
 
 </style>

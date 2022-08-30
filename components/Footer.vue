@@ -38,9 +38,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/styles/_variables.scss';
 footer {
-    position: fixed;
     width: 100%;
-    bottom: 0;
     background-color: $darkGrayBackground;
     color: white;
     .footer__wrapper {
