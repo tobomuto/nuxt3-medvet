@@ -3,36 +3,23 @@
         class="nav-dropdown-container text-xs"
         :class="link.id === 'user' ? 'user-link' : '' "
     >
-        <a 
+        <ButtonBase
             v-if="link.id === 'user' && connected === true"
             class="my-account"
             role="menuitem"
             tabindex="-1"
-        >
-            mon compte
-        </a>
+            :href="link.href"
+        > 
+            Mon compte
+        </ButtonBase>
         <a
             v-else
             role="menuitem"
             tabindex="-1"
+            :href="link.href"
         >
             {{ link.name }}
         </a>
-        <ul class="dropdown-menu list-none p0" role="menu" :aria-label="link.name" aria-expanded="false">
-            <li
-                v-for="submenu in link.subMenus"
-                :key="submenu.name"
-            >
-                <NuxtLink 
-                    :to="submenu.href"
-                    class="px-8 cursor-pointer py-3"
-                    role="menuitem"
-                    tabindex="-1"
-                    >
-                {{ submenu.name }}
-                </NuxtLink>
-            </li>
-        </ul>
     </li>
 </template>
 
@@ -94,38 +81,6 @@ export default {
                 justify-content: center;
             }
         }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            transform: translatex(-25%);
-            top: 70px;
-            background-color: white;
-            z-index: 10;
-            box-shadow: $boxShadowWide;
-            border-radius: 0 0 $borderRadius $borderRadius;
-            li {
-                white-space: nowrap;
-                a {
-                    text-decoration: none;
-                    color: $textMainColor;
-                    font-family: $fontRegular;
-                }
-                &:hover {
-                    background-color: $creatingStatus;
-                }
-            }
-        }
     }
 
-    .nav-dropdown-container:hover,
-    .nav-dropdown-container:focus {
-        a {
-            div {
-                transform: rotate(-180deg);
-            }
-        }
-        .dropdown-menu {
-            display: block;
-        }
-    }
 </style>

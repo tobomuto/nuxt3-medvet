@@ -2,59 +2,16 @@
     {
         "id": "laboratory",
         "name": "Laboratoire",
-        "subMenus": [
-            {
-                "name": "Informations laboratoire",
-                "href": "#"
-            },
-            {
-                "name": "Gestion des utilisateurs",
-                "href": "#"
-            }
-        ]
+        "href": "/laboratory"
     },
     {
         "id": "about",
         "name": "à propos",
-        "subMenus": [
-            {
-                "name": "Classification ATC",
-                "href": "#"
-            },
-            {
-                "name": "Espèce cible",
-                "href": "#"
-            },
-            {
-                "name": "Forme pharmaceutique",
-                "href": "#"
-            },
-            {
-                "name": "Principe Actif",
-                "href": "#"
-            },
-            {
-                "name": "Composant",
-                "href": "#"
-            },
-            {
-                "name": "Voie d'administration",
-                "href": "#"
-            }
-        ]
+        "href": "#"
     },
     {
         "id": "user",
         "name": "User",
-        "subMenus": [
-            {
-                "name": "Mes informations",
-                "href": "#"
-            },
-            {
-                "name": "Déconnexion",
-                "href": "#"
-            }
-        ]
+        "href": "#"
     }
 ]
