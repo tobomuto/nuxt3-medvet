@@ -39,6 +39,7 @@
         width: 100%;
         padding: 9px 16px;
         border: 1px solid $borderColor;
+        background-color: white;
         select {
             font-size: 12px;
             font-family: $fontBold;

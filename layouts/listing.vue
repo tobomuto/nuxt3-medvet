@@ -5,9 +5,11 @@
             <HeaderAlphabet/>
         </div>
         <main>
-            <slot/>
+            <div class="listing-page main-content">
+                <FiltersSideBar/>
+                <slot/>
+            </div>
         </main>
-
         <Footer/>
     </div>
 </template>
@@ -29,6 +31,7 @@ export default {
     display: flex;
     gap: clamp(0.625rem, -9.387rem + 17.8vw, 6.188rem);
     section {
+        flex: 1 1 auto;
         max-width: 972px;
         padding: 40px 10px;
     }

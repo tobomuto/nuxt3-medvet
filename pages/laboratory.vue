@@ -1,22 +1,19 @@
 <template>
-    <div class="listing-page main-content">
-        <FiltersSideBar/>
-        <section>
-            <h1>Laboratoires</h1>
-            <div class="flex items-center justify-between flex-wrap mb-4">
-                <span>{600} résultats trouvés</span>
-                <div class="flex items-center gap-8 items-center text-xs">
-                    <span class="text-disabled">Trier par</span>
-                    <span class="font-bold text-primary cursor-pointer">Ordre</span>
-                    <span class="font-bold cursor-pointer">Nombre de produits</span>
-                    <ButtonBase class="button_small_primary_dark text-sm">
-                        Télécharger la liste
-                    </ButtonBase>
-                </div>
+    <section>
+        <h1>Laboratoires</h1>
+        <div class="flex items-center justify-between flex-wrap mb-4">
+            <span>{600} résultats trouvés</span>
+            <div class="flex items-center gap-8 items-center text-xs">
+                <span class="text-disabled">Trier par</span>
+                <span class="font-bold text-primary cursor-pointer">Ordre</span>
+                <span class="font-bold cursor-pointer">Nombre de produits</span>
+                <ButtonBase class="button_small_primary_dark text-sm">
+                    Télécharger la liste
+                </ButtonBase>
             </div>
-            <ListingResults searchTypeResults='laboratory' :datas='resultsLabs'/>
-        </section>
-    </div>
+        </div>
+        <ListingResults searchTypeResults='laboratory' :datas='resultsLabs'/>
+    </section>
 </template>
 
 <script setup>

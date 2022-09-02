@@ -12,13 +12,16 @@
                 :key='result'
                 class="result"
             >
-                <div class="result-types">
-                    <span v-for="type in result.types" :key="type">{{ type }}</span>
-                    <span v-for="type in result.races" :key="type">{{ type }}</span>
+                <div class="result-types flex gap-5 mb-2">
+                    <span class="item-category" v-for="category in result.categories" :key="category">{{ category }}</span>
+                    <span class="item-race" v-for="race in result.races" :key="race">{{ race }}</span>
                 </div>
-                <span>{{ result.name }}</span>
-                <span>{{ result.lab }}</span>
-                <span>{{ result.updated }}</span>
+                <span class="mb-4">{{ result.name }}</span>
+                <div class="flex gap-1 text-xs">
+                    <span class="text-primary font-bold">{{ result.lab }}</span> 
+                    <span>|</span>
+                    <span>Mise à jour le {{ result.updated }}</span>
+                </div>
             </li>
         </template>
 
@@ -48,34 +51,6 @@
 
 <script setup>
 
-const resultsItems = [
-    {
-        name: 'ABCEDYL@PA',
-        lab: 'Laboratoire Boiron',
-        updated: '1 février 2021',
-        types: ['Médicament', 'Solution'],
-        races: ['chien', 'chat']
-    },
-    {
-        name: 'ABCEDYL@PA',
-        lab: 'Laboratoire Boiron',
-        updated: '1 février 2021',
-        types: ['Médicament', 'Solution'],
-        races: ['chien', 'chat']
-    },
-];
-const resultsLabs = [
-    {
-        name: 'Adiagene',
-        logo: 'https://graphiste.com/blog/wp-content/uploads/2017/06/logo-cheval-9.png',
-        products: 300,
-    },
-    {
-        name: 'AGROBIOTHERS',
-        logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEGYQcuwq-IZw/company-logo_200_200/0/1605274011276?e=2147483647&v=beta&t=rEbLREHg6AXULh71L_64SqItxUNiEU1xFrnx7HBVc4M',
-        products: 200,
-    },
-];
 defineProps({
     searchTypeResults: {
         type: String,
@@ -116,11 +91,30 @@ defineProps({
     }
     &.items-results {
         flex-direction: column;
+        gap: 10px;
         .result {
             width: 100%;
+            padding: 16px 18px;
+            .result-types {   
+                span {
+                    border-radius: $borderRadius;
+                    padding: 0.6em 2em;
+                    font-size: 10px;
+                    font-family: $fontBold;
+                }             
+                .item-category {
+                    background-color: $tertiaryLight;
+                    color: $tertiary;
+                }
+                .item-race {
+                    background-color: $primaryLight;
+                    color: $primary;
+                }
+            }
         }
     }
     .result {
+        width: max-content;
         background-color: white;
         border-radius: 10px;
         padding: 19px;
