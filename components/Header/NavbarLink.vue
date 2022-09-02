@@ -12,14 +12,14 @@
         > 
             Mon compte
         </ButtonBase>
-        <a
+        <Nuxt-Link
             v-else
             role="menuitem"
             tabindex="-1"
             :href="link.href"
         >
             {{ link.name }}
-        </a>
+        </Nuxt-Link>
     </li>
 </template>
 
