@@ -1,14 +1,15 @@
 <template>
-    <div class="sticky-header">
-        <HeaderNavbar/>
-        <HeaderAlphabet/>
+    <div>
+        <div class="sticky-header">
+            <HeaderNavbar/>
+            <HeaderAlphabet/>
+        </div>
+        <main>
+            <slot/>
+        </main>
+
+        <Footer/>
     </div>
-    <main>
-        <slot/>
-    </main>
-
-    <Footer/>
-
 </template>
 
 <script>

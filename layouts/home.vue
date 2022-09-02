@@ -1,13 +1,13 @@
 <template>
+    <div>
+        <HeaderNavbar/>
 
-    <HeaderNavbar/>
-
-    <main>
-        <slot />
-    </main>
-    
-    <Footer/>
-
+        <main>
+            <slot />
+        </main>
+        
+        <Footer/>
+    </div>
 </template>
 
 <script>
