@@ -16,7 +16,7 @@
             v-else
             role="menuitem"
             tabindex="-1"
-            :href="link.href"
+            :to="link.href"
         >
             {{ link.name }}
         </Nuxt-Link>
