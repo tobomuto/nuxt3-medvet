@@ -123,6 +123,19 @@ button {
     @include button(small, primary, dark);
 }
 
+.show-more-button {
+    padding: 0.7em 2.8em;
+    border-radius: $borderRadius;
+    border: none;
+    color: white;
+    background-color: $tertiary;
+    font-size: 12px;
+    &:hover {
+        transition: all 0.3s ease;
+        background-color: #DB6646;
+    }
+}
+
 .container {
     @include container;
 }

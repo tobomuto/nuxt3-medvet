@@ -1,0 +1,38 @@
+[
+    {
+        "id": "medications",
+        "name": "Médicaments",
+        "icon": "",
+        "href": "./add-product/medications"
+    },
+    {
+        "id": "food",
+        "name": "Aliments",
+        "icon": "",
+        "href": "./add-product/food"
+    },
+    {
+        "id": "biocide",
+        "name": "Biocide",
+        "icon": "",
+        "href": "./add-product/biocide"
+    },
+    {
+        "id": "diagnosis",
+        "name": "Test diagnostique",
+        "icon": "",
+        "href": "./add-product/diagnosis"
+    },
+    {
+        "id": "hygiene",
+        "name": "Produit d'hygiene",
+        "icon": "",
+        "href": "./add-product/hygiene"
+    },
+    {
+        "id": "material",
+        "name": "Matériel",
+        "icon": "",
+        "href": "./add-product/material"
+    }
+]
