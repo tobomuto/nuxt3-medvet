@@ -142,4 +142,8 @@ button {
     box-shadow: $boxShadowLight;
 }
 
+.nuxt-link-active {
+    color: red;
+}
+
 </style>

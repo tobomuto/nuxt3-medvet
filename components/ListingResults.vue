@@ -26,17 +26,11 @@
         </template>
 
         <template v-if="searchTypeResults === 'laboratory'">
-            <li
+            <LaboratoryCard
                 v-for="result in datas"
                 :key='result'
-                class="result"
-            >
-                <div class="logo-container">
-                    <img :src="result.logo" alt="">
-                </div>
-                <span class="mb-1">{{ result.name }}</span>
-                <span class="text-primary font-bold text-xs">{{ result.products }} produits</span>
-            </li>
+                :result='result'
+            />
         </template>
     </ul>
     <div class="text-center my-10">
@@ -74,20 +68,6 @@ defineProps({
         flex-direction: row;
         flex-wrap: wrap;
         gap: 20px;
-        .result {
-            width: 223px;
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            .logo-container {
-                height: 118px;
-                img {
-                    height: 100%;
-                    margin: 0 auto;
-                    object-fit: fill;
-                }
-            }
-        }
     }
     &.items-results {
         flex-direction: column;
@@ -114,7 +94,6 @@ defineProps({
         }
     }
     .result {
-        width: max-content;
         background-color: white;
         border-radius: 10px;
         padding: 19px;
