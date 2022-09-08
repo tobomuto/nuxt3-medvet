@@ -3,12 +3,21 @@
         <div>
             <div class="flex justify-between items-center">
                 <h6>FILTRER</h6>
-                <!-- <span>Tout effacer</span> -->
+                <span
+                    v-if="checkedCategories.length > 0"
+                    @click="deleteAllFilters"
+                >Tout effacer</span>
             </div>
         </div>
         <ul class="flex flex-wrap gap-2" v-if="checkedCategories.length > 0">
             <li class="checked-filter" v-for="checkedCategory in checkedCategories" :key="checkedCategory">
-                {{ checkedCategory }}
+                {{ checkedCategory.name }} 
+                <span 
+                    class="p-1 cursor-pointer"
+                    @click="deleteFromChecked(checkedCategory)"
+                >
+                        X
+                    </span>
             </li>
         </ul>
         <div>
@@ -18,7 +27,7 @@
                     v-for="(category, index) in categories"
                     :key="index"
                 >
-                    <input :id="category.id" :value="category.id" v-model="checkedCategories" type="checkbox">
+                    <input :id="category.id" :value="category" v-model="checkedCategories" type="checkbox" name="category">
                     <div class="flex justify-between">
                         <label :for="category.id">{{ category.name }}</label>
                         <span>100</span>
@@ -32,12 +41,74 @@
     </aside>
 </template>
 
-<script setup>
+<script>
 
 import categories from '@/assets/datas/categories.json';
 
-let checkedCategories = ref([])
-    
+export default {
+    data() {
+        return {
+            checkedCategories: [],
+            categories
+        }
+    },
+    methods: {
+        deleteAllFilters() {
+            let inputs = document.getElementsByName('category');
+            this.checkedCategories.splice(0);
+
+            inputs.forEach(input => {
+                if (input.checked) {
+                    input.click();
+                }
+                input.checked = false;
+            });
+        },
+        deleteFromChecked(checkedCategory) {
+            categories.forEach(category => {
+                if (category.id === checkedCategory.id) {
+
+                    let input = document.querySelector('#'+ category.id);
+                    
+                    input.click();
+                }
+            });
+        }
+    }
+}
+
+// let checkedCategories = ref([])
+
+// const deleteAllFilters = () => {
+//     let inputs = document.getElementsByName('category');
+//     checkedCategories.splice(0);
+
+//     // for (let i = 0; i < inputs.length; i++) {
+//     //     if (inputs[i].checked) {
+//     //         inputs[i].click();
+//     //     }
+        
+//     // }
+
+//     inputs.forEach(input => {
+//         if (input.checked) {
+//             input.click();
+//         }
+//         input.checked = false;
+//     });
+// }
+
+// const deleteFromChecked = (checkedCategory) => {
+//     categories.forEach(category => {
+//         if (category.id === checkedCategory.id) {
+
+//             let input = document.querySelector('#'+ category.id);
+            
+//             input.click();
+//         }
+//     });
+// }
+
 </script>
 
 <style lang='scss' scoped>

@@ -34,7 +34,7 @@
         </template>
     </ul>
     <div class="text-center my-10">
-        <p class="text-sm mb-4">Vous avez vu 10 résultats sur 600</p>
+        <p class="text-sm mb-4 italic">Vous avez vu 10 résultats sur 600</p>
         <ButtonBase 
             class="show-more-button"
         >

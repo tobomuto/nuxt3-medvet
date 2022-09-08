@@ -8,9 +8,8 @@
             class="my-account"
             role="menuitem"
             tabindex="-1"
-            :href="link.href"
         > 
-            Mon compte
+            <Nuxt-Link :to="link.href">Mon compte</Nuxt-Link>
         </ButtonBase>
         <Nuxt-Link
             v-else

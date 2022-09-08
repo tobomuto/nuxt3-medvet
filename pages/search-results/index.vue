@@ -2,7 +2,7 @@
     <section>
         <SearchWidget class="mb-4" />
         <div class="flex items-center justify-between flex-wrap mb-4">
-            <span>{600} résultats trouvés</span>
+            <span class="italic">{600} résultats trouvés</span>
             <div class="flex items-center gap-8 items-center text-xs">
                 <span class="text-disabled">Trier par</span>
                 <span class="font-bold text-primary cursor-pointer">Ordre</span>

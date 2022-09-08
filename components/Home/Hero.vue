@@ -36,7 +36,7 @@
         right: 50%;
         bottom: 0;
         width: 62%;
-        border-radius: 10px;
+        border-radius: $borderRadiusPlus;
         background-color: white;
         padding: 20px 25px 25px 25px;
         box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
