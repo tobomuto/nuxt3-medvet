@@ -23,21 +23,21 @@ export default {
 
 <style lang="scss" scoped>
 
-    .result {
-        width: 223px;
-        height: 200px;
-        .result-container {
-            display: flex;
-            flex-direction: column;
-            .logo-container {
-                height: 118px;
-                img {
-                    height: 100%;
-                    margin: 0 auto;
-                    object-fit: fill;
-                }
+.result {
+    width: 223px;
+    height: 200px;
+    .result-container {
+        display: flex;
+        flex-direction: column;
+        .logo-container {
+            height: 118px;
+            img {
+                height: 100%;
+                margin: 0 auto;
+                object-fit: fill;
             }
         }
     }
+}
 
 </style>

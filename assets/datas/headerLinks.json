@@ -12,6 +12,6 @@
     {
         "id": "user",
         "name": "User",
-        "href": "/account/my-infos"
+        "href": "/account"
     }
 ]

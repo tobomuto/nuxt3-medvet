@@ -1,16 +1,18 @@
 <template>
     <aside>
         <h4>Bienvenue <span class="text-tertiary">Alice Lamy</span></h4>
-        <Nuxt-Link to="#">Mes sauvegardes</Nuxt-Link>
-        <Nuxt-Link to="#">Mes informations</Nuxt-Link>
-        <Nuxt-Link to="#">Déconnexion</Nuxt-Link>
+        <button @click="$emit('someEvent', 'savings')" >Mes sauvegardes</button>
+        <button @click="$emit('someEvent', 'infos')" >Mes informations</button>
+        <button @click="logout()" >Déconnexion</button>
     </aside>
 </template>
 
-<script>
-export default {
+<script setup>
 
+const logout = () => {
+    console.log('logout')
 }
+
 </script>
 
 <style lang='scss' scoped>
