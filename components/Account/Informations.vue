@@ -1,13 +1,13 @@
 <template>
-    <section>
+    <section class="flex-auto max-w-[972px]">
         <div class="flex justify-between items-center flex-wrap">
             <h1>Mes informations</h1>
             <ButtonBase class="button_small_secondary_dark text-xs">Mettre à jour mes informations</ButtonBase>
         </div>
-        <div class="container mb-4">
+        <div class="container mb-4 leading-8">
             <h4>Mes informations</h4>
             <hr class="mt-2 mb-5">
-            <p><span class="font-bold">Nom : </span>Lamy</p>
+            <p ><span class="font-bold">Nom : </span>Lamy</p>
             <p><span class="font-bold">Prénom : </span>Alice</p>
             <p><span class="font-bold">Email : </span>exemple@exemple.com</p>
             <ButtonBase class="button_small_secondary_dark text-xs mt-6">Mettre à jour le mot de passe</ButtonBase>
@@ -29,6 +29,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+section {
+    padding: 40px 10px;
+}
 
 </style>

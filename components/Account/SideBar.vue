@@ -1,9 +1,21 @@
 <template>
-    <aside>
-        <h4>Bienvenue <span class="text-tertiary">Alice Lamy</span></h4>
-        <button @click="$emit('someEvent', 'savings')" >Mes sauvegardes</button>
-        <button @click="$emit('someEvent', 'infos')" >Mes informations</button>
-        <button @click="logout()" >Déconnexion</button>
+    <aside class="min-h-screen bg-white w-[296px]">
+        <h4 class="border-b border-bodyBackground">Bienvenue <span class="text-tertiary">Alice Lamy</span></h4>
+        <button 
+            class="border-b border-bodyBackground" 
+            @click="$emit('someEvent', 'savings')">
+                Mes sauvegardes
+        </button>
+        <button 
+            class="border-b border-bodyBackground" 
+            @click="$emit('someEvent', 'infos')" >
+                Mes informations
+        </button>
+        <button 
+            class="border-b border-bodyBackground" 
+            @click="logout()" >
+                Déconnexion
+        </button>
     </aside>
 </template>
 
@@ -15,26 +27,14 @@ const logout = () => {
 
 </script>
 
-<style lang='scss' scoped>
+<style scoped>
 
-    @import '~/assets/styles/_variables.scss';
+aside > * {
+    padding: 14px 23px;
+}
+aside:first-child {
+    padding: 30px 23px 15px 23px;
+} 
 
-    aside {
-        width: 296px;
-        min-height: 100vh;
-        background-color: white;
-        > * {
-            padding: 14px 23px;
-            border-bottom: 1px solid $bodyBackground;
-        }
-        > :first-child {
-            padding: 30px 23px 15px 23px;
-        } 
-        a {
-            display: block;
-            font-size: 12px;
-            font-family: $fontBold;
-        }
-    }
 
 </style>
