@@ -194,5 +194,15 @@ button {
     margin: 0 auto;
 }
 
+.border {
+    border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+}
+
+.border-large {
+    border: 1px solid $borderColor;
+    border-radius: $borderRadiusPlus;
+}
+
 
 </style>

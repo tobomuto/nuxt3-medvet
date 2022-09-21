@@ -1,6 +1,6 @@
 <template>
 <header class="bg-white" role="banner">
-    <div class="flex justify-between items-center mx-auto px-[50px]">
+    <div class="flex justify-between items-center mx-auto px-12 max-w-screen-xl">
         <nuxt-link class="logo-container" to="/">
             <span class="text-3xl text-primary">Med</span><span class="text-3xl">'Vet</span>
         </nuxt-link>

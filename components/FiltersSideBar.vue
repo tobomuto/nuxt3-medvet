@@ -16,8 +16,8 @@
                     class="p-1 cursor-pointer"
                     @click="deleteFromChecked(checkedCategory)"
                 >
-                        X
-                    </span>
+                    X
+                </span>
             </li>
         </ul>
         <div>

@@ -51,13 +51,6 @@ export default {
     @import '~/assets/styles/_variables.scss';
 
     .nav-dropdown-container {
-        a {
-            div {
-                color: $primary;
-                transform: rotate(0);
-                transition: .3s;
-            }
-        }
         &.user-link {
             .my-account {
                 @include button(small, primary, dark);

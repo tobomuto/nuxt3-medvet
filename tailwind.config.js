@@ -2,6 +2,12 @@
 module.exports = {
   content: [],
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     colors: {
       'white': '#FFFFFF',
       'bodyBackground': '#F5F6FA',
@@ -9,6 +15,7 @@ module.exports = {
       'textMain': '#19353E',
       'disabled': '#989898',
       'primary': '#27B3B8',
+      'primaryLight': '#CCEAE9', 
       'secondary': '#009892',
       'tertiary': '#F4704D',
       'tertiary-light': '#FDF0ED',
